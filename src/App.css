@@ -1,32 +1,83 @@
-.App {
-  text-align: center;
+*{
+    text-decoration: none;
+    list-style-type: none;
+}
+body{
+    background-color: rgba(0,0,0,.1);
+    font-family: "roboto","segoe ui",arial,sans-serif;
+}
+button{
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+input{
+    border:none;
+}
+form input[type='email'],
+form input[type='text'],
+form input[type='password']{
+    width: calc(100% - 20px);
+    height: 40px;
+    border:1px solid rgba(0,0,0,.1);
+    margin: 15px 0px;
+    padding-left:20px; 
+    border-radius: 5px;
+    transition: all .1s ease-in-out;
+    font-size:16px;
+}
+form input[type='email']:focus,
+form input[type='text']:focus,
+form input[type='password']:focus{
+    outline: none;
+    box-shadow: 0px 0px 5px rgba(0,0,0,.2);
+}
+form .btn_login_register{
+    width: 100%;
+    padding: 15px;
+    font-size: 18px;
+    color: white;
+    background: #f37b2b;
+    cursor: pointer;
+    border-radius: 5px;
+    outline: none;
+}
+form .btn_login_register:disabled{
+    background: #be7a4c;
+    cursor: not-allowed;
+}
+.dashboard{
+    text-align:center;
+    position:relative;
+    top:50px;
+    font-size:20px;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+/*this for App class only*/
+.boxParent{
+    background: white;
+    width: 30%;
+    margin: 0 auto;
+    position: relative;
+    top: 60px;
+    box-shadow: 1px 3px 6px rgba(0,0,0,.1);
+    transition: all .2s ease-in-out;
 }
-
-.App-link {
-  color: #61dafb;
+.boxParent:hover{
+    box-shadow: 1px 8px 15px rgba(0,0,0,.3);
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.boxParent .AppBtn{
+    border: none;
+    outline: none;
+    background-color:rgba(0,0,0,.3);
+    width: 50%;
+    padding:15px ;
+    cursor: pointer;
+    color: white;
+    font-size: 18px;
+}
+.boxParent .AppBtn.active{
+    background-color:white;
+    color: rgba(0,0,0,.6);
 }
